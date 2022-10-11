@@ -11,10 +11,11 @@ class NetworkHandle {
     http.Response response =await http.get(Uri.parse(url));
     if(response.statusCode == 200){
       String data = response.body;
-      var jsonData = jsonDecode(data);
-      return jsonData;
+      // print(jsonDecode(data));
+      return jsonDecode(data);
     }else{
-      print(response.statusCode) ;
+      // print(response.statusCode) ;
+      return response.statusCode;
     }
   }
 }
